@@ -8,7 +8,8 @@
 import Foundation
 import Combine
 
-public protocol RemoteDataSourceCore {
+public protocol Repository {
+    // alamofire
     associatedtype Request
     associatedtype Response
     
