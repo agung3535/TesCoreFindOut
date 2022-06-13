@@ -23,7 +23,7 @@ let package = Package(
         .target(
             name: "CoreFindOut",
             dependencies: [
-                "RealmSwift"
+                .product(name: "RealmSwift", package: "realm-cocoa")
             ]),
         .testTarget(
             name: "CoreFindOutTests",
