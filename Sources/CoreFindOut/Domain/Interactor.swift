@@ -8,10 +8,10 @@
 import Foundation
 import Combine
 
-public struct InteractorCore<Request, Response, Repository>: UseCaseCore where Repository.Request == Request, Repository.Response == Response {
-    private let repository: Repository
+public struct InteractorCore<Request, Response, R:Repository>: UseCaseCore where R.Request == Request, R.Response == Response {
+    private let repository: R
     
-    public init(repository: Repository) {
+    public init(repository: R) {
         self.repository = repository
     }
     
